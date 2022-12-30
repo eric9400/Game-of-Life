@@ -1,21 +1,16 @@
-NAME =		gameoflife
-
-CC =		gcc
-
-RM =		rm -f
-
-SRCS =		$(addprefix src/,	grid_operation.c \
-								display.c \
-								is_alive.c \
-								main.c \
-								init.c \
-								game.c \
-								SDL.c \
-								checks.c)
-
-OBJS =		${SRCS:.c=.o}
-
+NAME = gameoflife
+CC = gcc
+RM = rm -f
 CFLAGS =	-Werror -Wextra -Wall -std=c99 -O0 -g
+SRCS =		$(addprefix src/,	grid_operation.c \
+		display.c \
+		is_alive.c \
+		main.c \
+		init.c \
+		game.c \
+		SDL.c \
+		checks.c)
+OBJS =		${SRCS:.c=.o}
 
 all: ${NAME}
 
